@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777777;
+}
+
+header {
+  background-image: 
+  linear-gradient(to right bottom, rgba(67, 67, 67, .8), rgba(0, 0, 0, .8)),
+  url('../img/background1.jpg');
+  background-size: cover;
+  background-position: top;
+  height: 75vh;
+  position: relative;
+  --webkit-clip-path: polygon(50% 0, 100% 0, 100% 43%, 100% 77%, 100% 100%, 36% 87%, 0 79%, 0% 43%, 0 0);
+  clip-path: polygon(50% 0, 100% 0, 100% 43%, 100% 77%, 100% 100%, 36% 87%, 0 79%, 0% 43%, 0 0);
+  text-align: center;
+}
+
+.logo-box {
+  position: absolute;
+  margin: 20px;
+}
+
+.logo {
+  height: 50px;
+  background-color: rgba(0, 0, 0, .3);
+  --webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.heading-primary__main {
+  display: block;
+  font-size: 62px;
+  font-weight: 400;
+  letter-spacing: 15px;
+}
+
+.heading-primary__sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 15px;
+  width: 100vw;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 15px 40px;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+}
+
+.btn-white {
+  color: #777777;
+  background-color: #fff;
+}
+
+.btn:active {
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: -1;
+  border-radius: 100px;
+  transition: all 0.5s;
+}
+
+.btn-white::after {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.btn:hover::after {
+  /* transform: translate3d(12px, 50%, 3em); */
+  transform: scaleX(10.4) scaleY(10.6);
+  opacity: 0;
+}
